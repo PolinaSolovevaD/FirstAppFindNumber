@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		271170192A45DCC6005335D9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271170182A45DCC6005335D9 /* GameViewController.swift */; };
+		2711701B2A46164D005335D9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711701A2A46164D005335D9 /* Game.swift */; };
 		275110F32A435D3D00CDD85B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275110F22A435D3D00CDD85B /* AppDelegate.swift */; };
 		275110FA2A435D3D00CDD85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275110F82A435D3D00CDD85B /* Main.storyboard */; };
 		275110FC2A435D3F00CDD85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 275110FB2A435D3F00CDD85B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		271170182A45DCC6005335D9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2711701A2A46164D005335D9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		275110EF2A435D3D00CDD85B /* FindNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		275110F22A435D3D00CDD85B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		275110F92A435D3D00CDD85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				275110FD2A435D3F00CDD85B /* LaunchScreen.storyboard */,
 				275111002A435D3F00CDD85B /* Info.plist */,
 				271170182A45DCC6005335D9 /* GameViewController.swift */,
+				2711701A2A46164D005335D9 /* Game.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				271170192A45DCC6005335D9 /* GameViewController.swift in Sources */,
+				2711701B2A46164D005335D9 /* Game.swift in Sources */,
 				275110F32A435D3D00CDD85B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
