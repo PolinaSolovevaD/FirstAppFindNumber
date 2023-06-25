@@ -11,6 +11,7 @@ import Foundation
 enum StatusGame{
     case start
     case win
+    case lose
 }
 
 class Game {
@@ -28,10 +29,30 @@ class Game {
     
     var nextItem: Item?
     
-    var status: StatusGame = .start
+    var status: StatusGame = .start{
+        didSet{
+            if status != .start{
+                stopGame()
+            }
+        }
+    }
     
-    init(countItems: Int) {
+    private var timeForGame: Int{
+        didSet{
+            if timeForGame == 0{
+                status = .lose
+            }
+            updateTimer(status, timeForGame)
+        }
+    }
+    private var timer: Timer?
+    private var updateTimer: ((StatusGame, Int) -> Void)
+    
+    
+    init(countItems: Int, time: Int, updateTimer: @escaping (_ status: StatusGame, _ seconds: Int) -> Void) {
         self.countItems = countItems
+        self.timeForGame = time
+        self.updateTimer = updateTimer
         setupGame()
     }
     
@@ -43,7 +64,9 @@ class Game {
         }
         
         nextItem = items.shuffled().first
-        
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
+            self?.timeForGame -= 1
+        })
     }
     
     func check(index: Int){
@@ -56,6 +79,10 @@ class Game {
         if nextItem == nil {
             status = .win
         }
+    }
+    
+    private func stopGame(){
+        timer?.invalidate()
     }
 }
 

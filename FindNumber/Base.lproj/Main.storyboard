@@ -226,6 +226,13 @@
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkH-ij-eYi">
+                                <rect key="frame" x="92" y="739" width="228" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TDD-No-ddE"/>
                         <color key="backgroundColor" systemColor="tintColor"/>
@@ -233,6 +240,7 @@
                     <connections>
                         <outlet property="nextDigit" destination="hav-zH-Lcf" id="JJD-Tu-fAa"/>
                         <outlet property="statusLable" destination="2vo-JB-kai" id="jkR-TE-JEJ"/>
+                        <outlet property="timerLable" destination="CkH-ij-eYi" id="I94-tI-O9Z"/>
                         <outletCollection property="buttans" destination="wGZ-Zo-SyX" collectionClass="NSMutableArray" id="Lw8-9R-ezw"/>
                         <outletCollection property="buttans" destination="r9o-dS-H1Z" collectionClass="NSMutableArray" id="z2i-G8-yUc"/>
                         <outletCollection property="buttans" destination="nse-GR-OVK" collectionClass="NSMutableArray" id="duK-dB-71j"/>
