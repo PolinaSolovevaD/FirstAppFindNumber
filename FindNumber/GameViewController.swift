@@ -18,6 +18,8 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var timerLable: UILabel!
     
+    @IBOutlet weak var newGameButton: UIButton!
+    
     lazy var game = Game(countItems: buttans.count, time: 30) { [weak self] status, time in
         guard let self = self else {return}
         
@@ -41,6 +43,11 @@ class GameViewController: UIViewController {
         updateUI()
     }
     
+    @IBAction func newGame(_ sender: UIButton) {
+        game.newGame()
+        sender.isHidden = true
+        setupScreen()
+    }
     private func setupScreen(){
         
         for index in game.items.indices {
@@ -56,13 +63,18 @@ class GameViewController: UIViewController {
     private func updateUI(){
         for index in game.items.indices {
             buttans[index].isHidden = game.items[index].isFound
+            
+            if game.items[index].isError {
+                UIView.animate(withDuration: 0.3) { [weak self] in
+                    self?.buttans[index].backgroundColor = .red
+                } completion: { [weak self] _ in
+                    self?.buttans[index].backgroundColor = .white
+                    self?.game.items[index].isError = false
+                }
+            }
         }
         nextDigit.text = game.nextItem?.title
         
-//        if game.status == .win {
-//            statusLable.text = "You win!"
-//            statusLable.textColor = .green
-//        }
         updateInfoGame(with: game.status)
     }
     private func updateInfoGame(with status: StatusGame){
@@ -70,12 +82,15 @@ class GameViewController: UIViewController {
         case .start:
             statusLable.text = "Game start!"
             statusLable.textColor = .white
+            newGameButton.isHidden = true
         case .win:
             statusLable.text = "You win!"
             statusLable.textColor = .green
+            newGameButton.isHidden = false
         case .lose:
             statusLable.text = "You lose!"
             statusLable.textColor = .red
+            newGameButton.isHidden = false
         }
             
     }
