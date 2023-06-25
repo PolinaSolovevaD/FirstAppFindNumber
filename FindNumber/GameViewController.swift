@@ -52,7 +52,9 @@ class GameViewController: UIViewController {
         
         for index in game.items.indices {
             buttans[index].setTitle(game.items[index].title, for: .normal)
-            buttans[index].isHidden = false
+            //buttans[index].isHidden = false
+            buttans[index].alpha = 1
+            buttans[index].isEnabled = true
         }
         
         nextDigit.text = game.nextItem?.title
@@ -62,7 +64,9 @@ class GameViewController: UIViewController {
     
     private func updateUI(){
         for index in game.items.indices {
-            buttans[index].isHidden = game.items[index].isFound
+            //buttans[index].isHidden = game.items[index].isFound
+            buttans[index].alpha = game.items[index].isFound ? 0 : 1
+            buttans[index].isEnabled = !game.items[index].isFound
             
             if game.items[index].isError {
                 UIView.animate(withDuration: 0.3) { [weak self] in
