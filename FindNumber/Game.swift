@@ -64,6 +64,8 @@ class Game {
         }
         
         nextItem = items.shuffled().first
+        updateTimer(status, timeForGame)
+        
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
             self?.timeForGame -= 1
         })
@@ -86,3 +88,11 @@ class Game {
     }
 }
 
+extension Int{
+    func secondToString () -> String {
+        let minutes = self / 60
+        let seconds = self % 60
+        
+        return String(format: "%d:%02d", minutes, seconds)
+    }
+}

@@ -21,7 +21,7 @@ class GameViewController: UIViewController {
     lazy var game = Game(countItems: buttans.count, time: 30) { [weak self] status, time in
         guard let self = self else {return}
         
-        self.timerLable.text = "\(time)"
+        self.timerLable.text = time.secondToString()
         self.updateInfoGame(with: status)
     }
 
