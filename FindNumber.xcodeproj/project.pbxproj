@@ -18,6 +18,7 @@
 		27859E402A49F364002DBC55 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27859E3F2A49F364002DBC55 /* GreenViewController.swift */; };
 		27ABB8E62A50783B00A52684 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB8E52A50783B00A52684 /* SelectTimeViewController.swift */; };
 		27ABB8E82A50787C00A52684 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB8E72A50787C00A52684 /* SettingsTableViewController.swift */; };
+		27ABB8EA2A5091F700A52684 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB8E92A5091F700A52684 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		27859E3F2A49F364002DBC55 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		27ABB8E52A50783B00A52684 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		27ABB8E72A50787C00A52684 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		27ABB8E92A5091F700A52684 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				27859E3F2A49F364002DBC55 /* GreenViewController.swift */,
 				27ABB8E52A50783B00A52684 /* SelectTimeViewController.swift */,
 				27ABB8E72A50787C00A52684 /* SettingsTableViewController.swift */,
+				27ABB8E92A5091F700A52684 /* Settings.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				271170192A45DCC6005335D9 /* GameViewController.swift in Sources */,
 				27ABB8E82A50787C00A52684 /* SettingsTableViewController.swift in Sources */,
 				2711701B2A46164D005335D9 /* Game.swift in Sources */,
+				27ABB8EA2A5091F700A52684 /* Settings.swift in Sources */,
 				27ABB8E62A50783B00A52684 /* SelectTimeViewController.swift in Sources */,
 				275110F32A435D3D00CDD85B /* AppDelegate.swift in Sources */,
 			);

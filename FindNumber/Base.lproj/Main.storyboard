@@ -427,6 +427,9 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1IU-6S-XSO">
                                                     <rect key="frame" x="321" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+                                                    <connections>
+                                                        <action selector="changeTimerState:" destination="STH-UE-pjZ" eventType="valueChanged" id="SoM-Wx-Ahb"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyT-N4-Fe2">
                                                     <rect key="frame" x="20" y="11.333333333333336" width="44" height="21"/>
@@ -482,9 +485,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy2-Hg-7bl">
-                                                    <rect key="frame" x="130" y="4.3333333333333321" width="130" height="35"/>
+                                                    <rect key="frame" x="127.33333333333333" y="4.3333333333333321" width="135.66666666666669" height="35"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Defaul setting"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Default setting"/>
+                                                    <connections>
+                                                        <action selector="resetSettings:" destination="STH-UE-pjZ" eventType="touchUpInside" id="FoT-lM-NdS"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -502,6 +508,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="hRv-yd-Cnd"/>
+                    <connections>
+                        <outlet property="switchTimer" destination="1IU-6S-XSO" id="6CH-ds-FgX"/>
+                        <outlet property="timeGameLable" destination="RdR-NS-9Qu" id="Hau-OL-P94"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uq3-V0-L30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

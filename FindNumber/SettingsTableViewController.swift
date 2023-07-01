@@ -9,12 +9,33 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
     
+    @IBOutlet weak var switchTimer: UISwitch!
+    @IBOutlet weak var timeGameLable: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadSettings()
+    }
+    @IBAction func changeTimerState(_ sender: UISwitch) {
+        Settings.shared.currentSattings.timerState = sender.isOn
+    }
+    
+    func loadSettings() {
+        timeGameLable.text = "\(Settings.shared.currentSattings.timeForGame) sec"
+        switchTimer.isOn = Settings.shared.currentSattings.timerState
+    }
+    
+    @IBAction func resetSettings(_ sender: Any) {
+        Settings.shared.resetSettings()
+        loadSettings()
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier{
         case "selectTimeVC":
