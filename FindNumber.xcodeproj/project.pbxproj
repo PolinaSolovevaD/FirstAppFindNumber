@@ -14,9 +14,6 @@
 		275110F32A435D3D00CDD85B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275110F22A435D3D00CDD85B /* AppDelegate.swift */; };
 		275110FC2A435D3F00CDD85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 275110FB2A435D3F00CDD85B /* Assets.xcassets */; };
 		275110FF2A435D3F00CDD85B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275110FD2A435D3F00CDD85B /* LaunchScreen.storyboard */; };
-		27859E3C2A49DBCC002DBC55 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27859E3B2A49DBCC002DBC55 /* YellowViewController.swift */; };
-		27859E3E2A49F0F9002DBC55 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27859E3D2A49F0F9002DBC55 /* RedViewController.swift */; };
-		27859E402A49F364002DBC55 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27859E3F2A49F364002DBC55 /* GreenViewController.swift */; };
 		27ABB8E62A50783B00A52684 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB8E52A50783B00A52684 /* SelectTimeViewController.swift */; };
 		27ABB8E82A50787C00A52684 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB8E72A50787C00A52684 /* SettingsTableViewController.swift */; };
 		27ABB8EA2A5091F700A52684 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB8E92A5091F700A52684 /* Settings.swift */; };
@@ -32,9 +29,6 @@
 		275110FB2A435D3F00CDD85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		275110FE2A435D3F00CDD85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		275111002A435D3F00CDD85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27859E3B2A49DBCC002DBC55 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
-		27859E3D2A49F0F9002DBC55 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
-		27859E3F2A49F364002DBC55 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		27ABB8E52A50783B00A52684 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		27ABB8E72A50787C00A52684 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		27ABB8E92A5091F700A52684 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -77,9 +71,6 @@
 				275111002A435D3F00CDD85B /* Info.plist */,
 				271170182A45DCC6005335D9 /* GameViewController.swift */,
 				2711701A2A46164D005335D9 /* Game.swift */,
-				27859E3B2A49DBCC002DBC55 /* YellowViewController.swift */,
-				27859E3D2A49F0F9002DBC55 /* RedViewController.swift */,
-				27859E3F2A49F364002DBC55 /* GreenViewController.swift */,
 				27ABB8E52A50783B00A52684 /* SelectTimeViewController.swift */,
 				27ABB8E72A50787C00A52684 /* SettingsTableViewController.swift */,
 				27ABB8E92A5091F700A52684 /* Settings.swift */,
@@ -159,9 +150,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27859E402A49F364002DBC55 /* GreenViewController.swift in Sources */,
-				27859E3E2A49F0F9002DBC55 /* RedViewController.swift in Sources */,
-				27859E3C2A49DBCC002DBC55 /* YellowViewController.swift in Sources */,
 				271170192A45DCC6005335D9 /* GameViewController.swift in Sources */,
 				27ABB8E82A50787C00A52684 /* SettingsTableViewController.swift in Sources */,
 				2711701B2A46164D005335D9 /* Game.swift in Sources */,

@@ -9,7 +9,6 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    
     @IBOutlet var buttans: [UIButton]!
     
     
@@ -34,16 +33,17 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
+        
     setupScreen()
         
     }
     
+    
     @IBAction func pressButton(_ sender: UIButton) {
         guard let buttonIndex = buttans.firstIndex(of: sender) else { return }
         game.check(index: buttonIndex)
-        
-//        sender.isHidden = true
-        print(sender.currentTitle)
+
         updateUI()
     }
     
@@ -56,7 +56,7 @@ class GameViewController: UIViewController {
         
         for index in game.items.indices {
             buttans[index].setTitle(game.items[index].title, for: .normal)
-            //buttans[index].isHidden = false
+ 
             buttans[index].alpha = 1
             buttans[index].isEnabled = true
         }
