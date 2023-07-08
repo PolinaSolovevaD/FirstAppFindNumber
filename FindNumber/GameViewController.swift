@@ -95,12 +95,56 @@ class GameViewController: UIViewController {
             statusLable.text = "You win!"
             statusLable.textColor = .green
             newGameButton.isHidden = false
+            if game.isNewRecord {
+                showAlert()
+            } else {
+                showAlertActionSheet()
+            }
         case .lose:
             statusLable.text = "You lose!"
             statusLable.textColor = .red
             newGameButton.isHidden = false
+            showAlertActionSheet()
         }
             
     }
 
+    private func showAlert() {
+        let alert = UIAlertController(title: "Congratulation", message: "New Record!", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okayAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func showAlertActionSheet(){
+        let alert = UIAlertController(title: "What do you want to do?", message: nil, preferredStyle: .actionSheet)
+        let newGameAction = UIAlertAction(title: "Start New game", style: .default) { [weak self] (_) in
+            self?.game.newGame()
+            self?.setupScreen()
+        }
+        
+        let showRecord = UIAlertAction(title: "Show Record", style: .default) { (_) in
+            // TODO! - RECORD VIEW CONTROLLER
+            
+        }
+        
+        let menuAction = UIAlertAction(title: "Go to Menu", style: .destructive) { [weak self] (_) in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        
+        let canselAction = UIAlertAction(title: "Cansel", style: .cancel, handler: nil)
+        
+        alert.addAction(newGameAction)
+        alert.addAction(showRecord)
+        alert.addAction(menuAction)
+        alert.addAction(canselAction)
+        
+        if let popover = alert.popoverPresentationController{
+            popover.sourceView = statusLable
+
+        }
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
 }
