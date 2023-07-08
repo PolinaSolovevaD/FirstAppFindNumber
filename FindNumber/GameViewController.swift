@@ -123,8 +123,9 @@ class GameViewController: UIViewController {
             self?.setupScreen()
         }
         
-        let showRecord = UIAlertAction(title: "Show Record", style: .default) { (_) in
-            // TODO! - RECORD VIEW CONTROLLER
+        let showRecord = UIAlertAction(title: "Show Record", style: .default) { [weak self] (_) in
+            
+            self?.performSegue(withIdentifier: "recordVC", sender: nil)
             
         }
         
